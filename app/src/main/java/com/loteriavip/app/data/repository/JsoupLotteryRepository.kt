@@ -4,7 +4,9 @@ import android.content.Context
 import android.util.Log
 import com.loteriavip.app.data.local.AppDatabase
 import com.loteriavip.app.data.local.dao.FavoriteDao
+import com.loteriavip.app.data.local.dao.LotteryCacheDao
 import com.loteriavip.app.data.local.entity.FavoriteEntity
+import com.loteriavip.app.data.local.entity.LotteryCacheEntity
 import com.loteriavip.app.domain.model.HotNumber
 import com.loteriavip.app.domain.model.LiveLotteryResult
 import com.loteriavip.app.domain.model.ResultCategory
@@ -119,6 +121,7 @@ class JsoupLotteryRepository private constructor(context: Context) : LotteryRepo
     private val repositoryScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     private val favoriteDao: FavoriteDao = AppDatabase.getDatabase(context).favoriteDao()
+    private val cacheDao: LotteryCacheDao = AppDatabase.getDatabase(context).lotteryCacheDao()
 
     private val refreshTrigger = MutableStateFlow(0)
 
@@ -130,18 +133,25 @@ class JsoupLotteryRepository private constructor(context: Context) : LotteryRepo
     @OptIn(ExperimentalCoroutinesApi::class)
     private val sharedPollingFlow: Flow<List<LiveLotteryResult>> = refreshTrigger.flatMapLatest {
         flow {
-            var cachedResults = emptyList<LiveLotteryResult>()
+            var cachedResults = loadFromDiskCache()
+            if (cachedResults.isNotEmpty()) {
+                emit(cachedResults)
+            }
             while (true) {
                 try {
                     val results = scrapeLoterias()
                     if (results.isNotEmpty()) {
                         cachedResults = results
+                        saveToDiskCache(results)
                         emit(results)
-                    } else {
+                    } else if (cachedResults.isNotEmpty()) {
                         emit(cachedResults)
                     }
                 } catch (e: Exception) {
-                    Log.e("JsoupLotteryRepository", "Error scraping", e)
+                    Log.e("JsoupLotteryRepository", "Error scraping, serving offline cache", e)
+                    if (cachedResults.isEmpty()) {
+                        cachedResults = loadFromDiskCache()
+                    }
                     emit(cachedResults)
                 }
                 delay(30000)
@@ -152,6 +162,28 @@ class JsoupLotteryRepository private constructor(context: Context) : LotteryRepo
         started = SharingStarted.WhileSubscribed(5000),
         replay = 1
     )
+
+    private suspend fun loadFromDiskCache(): List<LiveLotteryResult> {
+        return try {
+            val entities = cacheDao.getAllCachedResults()
+            val favoritesSet = favoriteDao.getAllFavoriteIdsList().toSet()
+            entities.map { entity ->
+                entity.toDomainModel(isFavorite = favoritesSet.contains(entity.id))
+            }
+        } catch (e: Exception) {
+            Log.e("JsoupLotteryRepository", "Error loading disk cache", e)
+            emptyList()
+        }
+    }
+
+    private suspend fun saveToDiskCache(results: List<LiveLotteryResult>) {
+        try {
+            val entities = results.map { LotteryCacheEntity.fromDomainModel(it) }
+            cacheDao.insertAll(entities)
+        } catch (e: Exception) {
+            Log.e("JsoupLotteryRepository", "Error saving disk cache", e)
+        }
+    }
 
     private fun getStartOfDay(timestamp: Long): Long {
         val cal = Calendar.getInstance(TimeZone.getTimeZone("America/Santo_Domingo"))
