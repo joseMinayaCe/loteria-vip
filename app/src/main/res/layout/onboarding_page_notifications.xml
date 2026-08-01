@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔔"
+            android:textSize="52sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Qué sorteos te interesan?"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_primary"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona los que quieres recibir. Puedes cambiarlos después en Ajustes."
+            android:textSize="14sp"
+            android:textColor="@color/grey_dark"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mint_bg"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Loterías Dominicanas -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🇩🇴  LOTERÍAS DOMINICANAS"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey_dark"
+            android:layout_marginBottom="8dp"
+            android:letterSpacing="0.1"/>
+
+        <CheckBox android:id="@+id/chk_gana_mas"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🎰  Gana Más / Nacional" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+        <CheckBox android:id="@+id/chk_leidsa"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🎰  Leidsa (Loto, Loto Más)" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+        <CheckBox android:id="@+id/chk_real"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🎰  Lotería Real" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+        <CheckBox android:id="@+id/chk_primera"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🎰  La Primera" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+        <CheckBox android:id="@+id/chk_loteka"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🎰  Loteka" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+        <CheckBox android:id="@+id/chk_king"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🎰  King Lottery" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+        <!-- Internacionales -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mint_bg"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌎  INTERNACIONALES"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey_dark"
+            android:layout_marginBottom="8dp"
+            android:letterSpacing="0.1"/>
+
+        <CheckBox android:id="@+id/chk_new_york"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🗽  New York" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+        <CheckBox android:id="@+id/chk_florida"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🌴  Florida" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+        <CheckBox android:id="@+id/chk_haiti"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:text="🇭🇹  Haiti Bolet" android:textSize="15sp"
+            android:textColor="@color/green_primary_dark"
+            android:buttonTint="@color/green_primary" android:checked="true"
+            android:paddingStart="4dp"/>
+
+    </LinearLayout>
+</ScrollView>

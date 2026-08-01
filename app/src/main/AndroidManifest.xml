@@ -8,7 +8,7 @@
         android:name=".LoteriaVipApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Lotería VIP"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
@@ -29,8 +29,9 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/green_primary" />
 
+        <!-- Onboarding: shown once on first launch -->
         <activity
-            android:name="com.loteriavip.app.MainActivity"
+            android:name="com.loteriavip.app.presentation.screens.onboarding.OnboardingActivity"
             android:exported="true"
             android:theme="@style/Theme.LoteriaVIP">
             <intent-filter>
@@ -38,6 +39,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.loteriavip.app.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LoteriaVIP"/>
 
         <service
             android:name="com.loteriavip.app.data.notification.MyFirebaseMessagingService"

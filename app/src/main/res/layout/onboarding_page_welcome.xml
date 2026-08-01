@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/green_primary"
+    android:padding="40dp">
+
+    <!-- Emoji grande con fondo circular -->
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="32dp">
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_circle_lime"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="🎰"
+            android:textSize="52sp"
+            android:gravity="center"/>
+
+    </FrameLayout>
+
+    <!-- Título principal -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido a\nLotería VIP"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Subtítulo -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultados de loterías dominicanas en tiempo real, directo a tu teléfono."
+        android:textSize="16sp"
+        android:textColor="#CCFFFFFF"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginBottom="48dp"/>
+
+    <!-- Features -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card_translucent"
+        android:padding="20dp">
+
+        <include layout="@layout/item_onboarding_feature"
+            android:id="@+id/feature1"/>
+
+        <include layout="@layout/item_onboarding_feature"
+            android:id="@+id/feature2"/>
+
+        <include layout="@layout/item_onboarding_feature"
+            android:id="@+id/feature3"/>
+
+    </LinearLayout>
+
+</LinearLayout>
