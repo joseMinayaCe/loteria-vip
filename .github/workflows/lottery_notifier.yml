@@ -2,8 +2,8 @@ name: Loteria VIP Free Notifier
 
 on:
   schedule:
-    # Runs every 5 minutes
-    - cron: '*/5 * * * *'
+    # Runs every 1 minute (max speed - public repo = unlimited minutes)
+    - cron: '* * * * *'
   workflow_dispatch:
 
 jobs:
