@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔔 Recibe Notificaciones al Instante"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#005943"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/dialog_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecciona tus sorteos favoritos para recibir alertas VIP en tiempo real cuando salgan los resultados."
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@android:color/darker_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/chk_gana_mas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gana Más / Lotería Nacional"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:checked="true"/>
+
+            <CheckBox
+                android:id="@+id/chk_leidsa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leidsa (Loto, etc.)"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:checked="true"/>
+
+            <CheckBox
+                android:id="@+id/chk_real"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lotería Real"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:checked="true"/>
+
+            <CheckBox
+                android:id="@+id/chk_primera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La Primera"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:checked="true"/>
+
+            <CheckBox
+                android:id="@+id/chk_loteka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loteka"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:checked="true"/>
+
+            <CheckBox
+                android:id="@+id/chk_new_york"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sorteos de New York"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:checked="true"/>
+
+            <CheckBox
+                android:id="@+id/chk_florida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sorteos de Florida"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:checked="true"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activar Notificaciones VIP"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#005943"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:elevation="4dp"/>
+
+    <TextView
+        android:id="@+id/btn_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preguntar más tarde"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"/>
+
+</LinearLayout>

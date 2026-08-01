@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="Apariencia">
+        <SwitchPreferenceCompat
+            app:key="dark_mode_enabled"
+            app:title="Modo Oscuro"
+            app:summary="Activar o desactivar el modo oscuro"
+            app:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Notificaciones VIP">
+        <SwitchPreferenceCompat
+            app:key="notification_global_enabled"
+            app:title="Activar Notificaciones VIP"
+            app:summary="Recibir alertas de resultados al instante"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_gana-mas"
+            app:title="Gana Más / Lotería Nacional"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_leidsa"
+            app:title="Leidsa (Loto, etc.)"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_real"
+            app:title="Lotería Real"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_la-primera"
+            app:title="La Primera"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_loteka"
+            app:title="Loteka"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_anguila"
+            app:title="Loterías Anguila"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_king-lottery"
+            app:title="King Lottery"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_la-suerte"
+            app:title="La Suerte"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_lotedom"
+            app:title="LoteDom"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_new-york"
+            app:title="Sorteos de New York"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_florida"
+            app:title="Sorteos de Florida"
+            app:defaultValue="true" />
+        <SwitchPreferenceCompat
+            app:key="notification_haiti-bolet"
+            app:title="Haiti Bolet"
+            app:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Soporte y Diagnóstico">
+        <Preference
+            app:key="diag_test_notification"
+            app:title="Enviar Notificación de Prueba"
+            app:summary="Toca para recibir una notificación de prueba en este celular" />
+        <Preference
+            app:key="diag_fcm_token"
+            app:title="Token de Notificaciones (FCM)"
+            app:summary="Cargando token..." />
+    </PreferenceCategory>
+</PreferenceScreen>

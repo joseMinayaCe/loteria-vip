@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
+
+    <TextView
+        android:id="@+id/txtStatNumber"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_number_bubble"
+        android:gravity="center"
+        android:textColor="@color/green_primary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="08" />
+
+    <TextView
+        android:id="@+id/txtStatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/green_primary_dark"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/txtStatNumber"
+        app:layout_constraintTop_toTopOf="@id/txtStatNumber"
+        tools:text="Número 08" />
+
+    <ProgressBar
+        android:id="@+id/progressBarFrequency"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:max="100"
+        android:progress="75"
+        android:progressTint="@color/green_primary"
+        android:progressBackgroundTint="@color/grey_light"
+        app:layout_constraintEnd_toStartOf="@id/layoutTrend"
+        app:layout_constraintStart_toStartOf="@id/txtStatTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtStatTitle" />
+
+    <LinearLayout
+        android:id="@+id/layoutTrend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtStatCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green_primary_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="45 veces" />
+
+            <ImageView
+                android:id="@+id/imgStatTrend"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_arrow_up"
+                app:tint="@color/verified_green"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtTrendLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_dark"
+            android:textSize="10sp"
+            android:text="Tendencia" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

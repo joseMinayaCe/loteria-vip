@@ -1,0 +1,147 @@
+{
+  "firstPosStats": [],
+  "gameStats": [],
+  "hotNumbers": [
+    {
+      "_id": "27",
+      "score": "27",
+      "count": 27,
+      "pos1": 7,
+      "pos2": 13,
+      "pos3": 7,
+      "max_date": "2026-06-15T04:00:00.000Z"
+    },
+    {
+      "_id": "42",
+      "score": "42",
+      "count": 27,
+      "pos1": 5,
+      "pos2": 10,
+      "pos3": 12,
+      "max_date": "2026-06-14T04:00:00.000Z"
+    },
+    {
+      "_id": "28",
+      "score": "28",
+      "count": 26,
+      "pos1": 10,
+      "pos2": 7,
+      "pos3": 9,
+      "max_date": "2026-06-15T04:00:00.000Z"
+    },
+    {
+      "_id": "01",
+      "score": "01",
+      "count": 25,
+      "pos1": 8,
+      "pos2": 6,
+      "pos3": 11,
+      "max_date": "2026-06-14T04:00:00.000Z"
+    },
+    {
+      "_id": "76",
+      "score": "76",
+      "count": 25,
+      "pos1": 6,
+      "pos2": 7,
+      "pos3": 12,
+      "max_date": "2026-06-15T04:00:00.000Z"
+    },
+    {
+      "_id": "68",
+      "score": "68",
+      "count": 25,
+      "pos1": 6,
+      "pos2": 11,
+      "pos3": 8,
+      "max_date": "2026-06-14T04:00:00.000Z"
+    },
+    {
+      "_id": "33",
+      "score": "33",
+      "count": 24,
+      "pos1": 8,
+      "pos2": 11,
+      "pos3": 5,
+      "max_date": "2026-06-14T04:00:00.000Z"
+    }
+  ],
+  "coldNumbers": [
+    {
+      "_id": "09",
+      "score": "09",
+      "count": 8,
+      "pos1": 2,
+      "pos2": 3,
+      "pos3": 3,
+      "max_date": "2026-06-12T04:00:00.000Z"
+    },
+    {
+      "_id": "74",
+      "score": "74",
+      "count": 9,
+      "pos1": 3,
+      "pos2": 4,
+      "pos3": 2,
+      "max_date": "2026-06-14T04:00:00.000Z"
+    },
+    {
+      "_id": "22",
+      "score": "22",
+      "count": 9,
+      "pos1": 3,
+      "pos2": 2,
+      "pos3": 4,
+      "max_date": "2026-06-14T04:00:00.000Z"
+    },
+    {
+      "_id": "59",
+      "score": "59",
+      "count": 11,
+      "pos1": 2,
+      "pos2": 5,
+      "pos3": 4,
+      "max_date": "2026-06-15T04:00:00.000Z"
+    },
+    {
+      "_id": "48",
+      "score": "48",
+      "count": 11,
+      "pos1": 3,
+      "pos2": 3,
+      "pos3": 5,
+      "max_date": "2026-06-11T04:00:00.000Z"
+    },
+    {
+      "_id": "20",
+      "score": "20",
+      "count": 11,
+      "pos1": 5,
+      "pos2": 3,
+      "pos3": 3,
+      "max_date": "2026-06-12T04:00:00.000Z"
+    },
+    {
+      "_id": "90",
+      "score": "90",
+      "count": 11,
+      "pos1": 5,
+      "pos2": 2,
+      "pos3": 4,
+      "max_date": "2026-06-14T04:00:00.000Z"
+    }
+  ],
+  "feed": [
+    {
+      "_id": "6a2dbdba8254034be6498126",
+      "site_id": "6966a6d1ea7015c3b8a3d446",
+      "link": "https://loteriasdominicanas.com/pagina/contacto",
+      "body": "<p>Estamos realizando mejoras y actualizaciones en nuestra página para ofrecerles un mejor servicio.</p><p>Les pedimos disculpas por cualquier inconveniente. Si encuentran algún problema, por favor repórtenlo a nuestro equipo de soporte.</p>",
+      "date": "2026-06-13T20:29:28.063Z",
+      "createdAt": "2026-06-13T20:29:46.442Z",
+      "updatedAt": "2026-06-13T20:29:46.442Z",
+      "__v": 0,
+      "id": "6a2dbdba8254034be6498126"
+    }
+  ]
+}

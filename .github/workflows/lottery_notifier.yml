@@ -1,0 +1,49 @@
+name: Loteria VIP Free Notifier
+
+on:
+  schedule:
+    # Runs every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  check-and-notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Cache npm modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('scripts/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: |
+          cd scripts
+          npm install
+
+      - name: Run Lottery Notifier
+        env:
+          FIREBASE_PROJECT_ID: "web-to-app-loteria"
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          cd scripts
+          node cron_notifier.js
+
+      - name: Commit updated sent state
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add scripts/sent_draws.json
+          git commit -m "update: sent draws state [skip ci]" || echo "No changes to commit"
+          git push || echo "Push failed or no changes"

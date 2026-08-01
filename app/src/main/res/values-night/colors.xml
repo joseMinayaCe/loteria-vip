@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme colors -->
+    <color name="colorPrimary">#001A1A</color>
+    <color name="colorPrimaryVariant">#003333</color>
+    <color name="colorSecondary">#6600CC</color>
+    <color name="background">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="onBackground">#E0E0E0</color>
+    <color name="onSurface">#E0E0E0</color>
+</resources>

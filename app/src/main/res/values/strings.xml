@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Resultados Loterías</string>
+    <string name="tab_loterias">Loterías</string>
+    <string name="tab_lottos">Lottos</string>
+    <string name="tab_americanas">Americanas</string>
+    <string name="select_date">Seleccionar fecha</string>
+    <string name="results_for_date">Resultados del: %1$s</string>
+    <string name="back_to_today">Volver a Hoy</string>
+    <string name="loading">Cargando...</string>
+</resources>

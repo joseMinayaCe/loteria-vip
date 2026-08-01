@@ -1,0 +1,13 @@
+{
+  "name": "loteria-vip-free-notifier",
+  "version": "1.0.0",
+  "description": "Gratis - Verificador y enviador automático de notificaciones de Lotería VIP",
+  "main": "cron_notifier.js",
+  "scripts": {
+    "start": "node cron_notifier.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "google-auth-library": "^9.7.0"
+  }
+}

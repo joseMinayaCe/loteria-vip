@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/app/build
+node_modules
+/functions/node_modules
+/scripts/node_modules
+/loterias-rd-api/node_modules
+/chrome_debug_profile
+scripts/service-account.json

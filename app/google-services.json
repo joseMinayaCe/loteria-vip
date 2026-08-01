@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "153819424421",
+    "project_id": "web-to-app-loteria",
+    "storage_bucket": "web-to-app-loteria.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153819424421:android:67d49d1d20719127a70f4c",
+        "android_client_info": {
+          "package_name": "com.loteria.numerologia.ganador"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCILqKwMvECzODlGltOLTMFoxLsL5k9GqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153819424421:android:766be75a2dd7e769a70f4c",
+        "android_client_info": {
+          "package_name": "com.ver.resultados.loteria"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCILqKwMvECzODlGltOLTMFoxLsL5k9GqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

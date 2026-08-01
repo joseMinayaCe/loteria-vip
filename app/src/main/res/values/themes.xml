@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LoteriaVIP" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorPrimaryDark">@color/green_primary_dark</item>
+        <item name="colorAccent">@color/lime_accent</item>
+        <item name="colorPrimaryVariant">@color/green_primary_dark</item>
+        <item name="colorSecondary">@color/lime_accent</item>
+        <item name="colorSecondaryVariant">@color/green_primary_dark</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/green_primary_dark</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_calendar"
+        android:title="Hoy" />
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_star"
+        android:title="Favoritos" />
+    <item
+        android:id="@+id/nav_predictions"
+        android:icon="@drawable/ic_luck"
+        android:title="Suerte" />
+
+    <item
+        android:id="@+id/nav_stats"
+        android:icon="@drawable/ic_stats"
+        android:title="Estadísticas" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Ajustes" />
+    <item
+        android:id="@+id/nav_dummy"
+        android:title=""
+        android:visible="false"
+        android:enabled="false" />
+</menu>
